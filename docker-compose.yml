@@ -1,0 +1,27 @@
+name: libreria
+services:
+  db:
+    build: db/
+    environment:
+      - POSTGRES_PASSWORD=22833959
+      - POSTGRES_DB=libreria
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  backend:
+    build: backend/
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: frontend/
+    depends_on:
+      - db
+      - backend
+    ports:
+      - "5173:5173"
+
+volumes:
+  db-data:
