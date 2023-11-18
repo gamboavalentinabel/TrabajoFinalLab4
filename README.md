@@ -16,7 +16,7 @@ $ docker compose up -d
 $ docker compose down
 ```
 > [!TIP]
-> *Para eliminar también las **_Imágenes_** agregar `--rmi all` y para eliminar los **_Volúmenes_** agregar `--volumes all`. Por ejemplo: `docker compose down --rmi --volumes all`*
+> *Para eliminar también las **_Imágenes_** agregar `--rmi all` y para eliminar los **_Volúmenes_** agregar `-v all`. Por ejemplo: `docker compose down -v --rmi all`*
 
 
 ## 📦 Programas:
